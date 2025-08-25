@@ -59,7 +59,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
       )}
       layout
     >
-      {showMachine && (
+      {/* {showMachine && (
         <div className="relative w-4/5 sm:w-2/3 gap-2 justify-center text-center font-black">
           <motion.h2
             className="absolute sm:text-2xl text-lg sm:-top-2 top-102 leading-tight justify-self-center"
@@ -81,7 +81,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
             or just vibe
           </motion.h3>
         </div>
-      )}
+      )} */}
 
       <AnimatePresence mode="wait">
         {showMachine && (
