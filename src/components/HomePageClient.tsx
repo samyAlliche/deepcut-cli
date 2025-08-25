@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { toast } from "sonner";
 import DisplayToggle from "./Videos/DisplayToggle";
 import BackButton from "./BackButton";
+import clsx from "clsx";
 
 interface HomePageClientProps {
   shuffleAction: (value: number) => Promise<Video[]>;
@@ -45,7 +46,10 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
 
   return (
     <motion.div
-      className="flex flex-col items-center w-full min-h-[600px]"
+      className={clsx(
+        "flex flex-col items-center w-full min-h-[600px]",
+        hasShuffled && !isLoading && "mt-14 sm:mt-8"
+      )}
       layout
     >
       <AnimatePresence mode="wait">
@@ -73,7 +77,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex flex-col items-center w-full gap-3 sm:gap-8">
+      <div className="flex flex-col items-center w-full gap-5 sm:gap-8">
         <motion.div
           layout
           initial={{ opacity: 0, y: 20 }}
@@ -121,7 +125,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
           )}
           {!isLoading && hasShuffled && shuffledData.length > 0 && (
             <motion.div
-              className="mt-8 w-full max-w-4xl"
+              className=" w-full max-w-4xl"
               key="results"
               initial={{ opacity: 0, y: 30 }}
               animate={{

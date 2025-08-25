@@ -11,7 +11,7 @@ const DisplayToggle = ({ isOneColumn, setIsOneColumn }: DisplayToggleProps) => {
   return (
     <ToggleGroup
       type="single"
-      variant={"outline"}
+      //variant={"outline"}
       size={"lg"}
       value={isOneColumn ? "a" : "b"}
       onValueChange={(value) => setIsOneColumn(value === "a")}
