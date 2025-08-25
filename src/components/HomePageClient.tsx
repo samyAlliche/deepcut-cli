@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import Machine from "@/components/Machine/Machine";
 import Video from "@/types/video";
-import VideoGrid from "./Videos/VideoGrid";
-import ShuffleButton from "./Machine/ShuffleButton";
+import VideoGrid from "@/components/Videos/VideoGrid";
+import ShuffleButton from "@/components/Machine/ShuffleButton";
 import { AnimatePresence, motion } from "motion/react";
 import { toast } from "sonner";
-import DisplayToggle from "./Videos/DisplayToggle";
-import BackButton from "./BackButton";
+import DisplayToggle from "@/components/Videos/DisplayToggle";
+import BackButton from "@/components/BackButton";
 import clsx from "clsx";
 
 interface HomePageClientProps {
@@ -44,6 +44,13 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
   const showMachine =
     !hasShuffled || (hasShuffled && shuffledData.length === 0 && !isLoading);
 
+  const springAnimation = {
+    type: "spring" as const,
+    stiffness: 150,
+    damping: 20,
+    mass: 3,
+  };
+
   return (
     <motion.div
       className={clsx(
@@ -52,6 +59,30 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
       )}
       layout
     >
+      {showMachine && (
+        <div className="relative w-full gap-2 justify-center text-center font-black">
+          <motion.h2
+            className="absolute sm:text-2xl text-lg sm:-top-2 top-102 leading-tight justify-self-center"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={springAnimation}
+          >
+            Discover random tracks from curated YouTube playlists
+          </motion.h2>
+          <motion.h3
+            className="absolute sm:text-xl text-sm top-117 sm:top-7 justify-self-center"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ ...springAnimation, delay: 0.5 }}
+          >
+            Hit <span className="italic">Shuffle</span>, get inspired, sample,
+            or just vibe
+          </motion.h3>
+        </div>
+      )}
+
       <AnimatePresence mode="wait">
         {showMachine && (
           <motion.div
