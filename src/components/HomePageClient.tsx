@@ -93,12 +93,14 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
             <BackButton onClick={handleBack} />
           )}
         </motion.div>
-        <div className="sm:hidden w-full flex justify-end">
-          <DisplayToggle
-            isOneColumn={isOneColumn}
-            setIsOneColumn={setIsOneColumn}
-          />
-        </div>
+        {hasShuffled && !isLoading && (
+          <div className="sm:hidden w-full flex justify-end">
+            <DisplayToggle
+              isOneColumn={isOneColumn}
+              setIsOneColumn={setIsOneColumn}
+            />
+          </div>
+        )}
 
         <AnimatePresence mode="wait">
           {isLoading && hasShuffled && (

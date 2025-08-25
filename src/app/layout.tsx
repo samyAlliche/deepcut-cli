@@ -10,10 +10,7 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Deepcut - random samples from curated YouTube playlists",
-    template: "%s | Deepcut",
-  },
+  title: "Deepcut - Random Samples From Curated YouTube Playlists",
   description: "Deepcut — random samples from curated YouTube playlists.",
   openGraph: {
     title: "Deepcut",
@@ -21,14 +18,14 @@ export const metadata: Metadata = {
       "Pick random samples from curated YouTube playlists with Deepcut.",
     url: "https://deepcut.twxntytwo.com",
     siteName: "Deepcut",
-    // images: [
-    //   {
-    //     url: "/og-image.png", // place this file in /public
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Deepcut",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Deepcut",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
