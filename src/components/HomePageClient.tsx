@@ -60,7 +60,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
       layout
     >
       {showMachine && (
-        <div className="relative w-full gap-2 justify-center text-center font-black">
+        <div className="relative w-4/5 sm:w-2/3 gap-2 justify-center text-center font-black">
           <motion.h2
             className="absolute sm:text-2xl text-lg sm:-top-2 top-102 leading-tight justify-self-center"
             initial={{ opacity: 0, y: 10 }}
@@ -70,7 +70,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
           >
             Discover random tracks from curated YouTube playlists
           </motion.h2>
-          {/* <motion.h3
+          <motion.h3
             className="absolute sm:text-xl text-sm top-117 sm:top-7 justify-self-center"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
           >
             Hit <span className="italic">Shuffle</span>, get inspired, sample,
             or just vibe
-          </motion.h3> */}
+          </motion.h3>
         </div>
       )}
 
