@@ -84,6 +84,7 @@ const Machine: React.FC<MachineProps> = ({
           className="bg-olive text-background rounded-full hover:bg-olive-dark p-5"
           onClick={() => onValueChange(value > 1 ? value - 1 : 1)}
           size={"xxl"}
+          aria-label="minus"
         >
           <Minus className="h-10 w-10" />
         </Button>
@@ -91,6 +92,7 @@ const Machine: React.FC<MachineProps> = ({
           className="p-5 bg-olive text-background rounded-full hover:bg-olive-dark"
           onClick={() => onValueChange(value < 10 ? value + 1 : 10)}
           size={"xxl"}
+          aria-label="plus"
         >
           <Plus className="h-10 w-10" />
         </Button>
