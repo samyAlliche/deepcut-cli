@@ -86,7 +86,8 @@ const Machine: React.FC<MachineProps> = ({
           size={"xxl"}
           aria-label="minus"
         >
-          <Minus className="h-10 w-10" />
+          {/* <Minus className="h-10 w-10" /> */}
+          <span className="text-4xl font-black">-</span>
         </Button>
         <Button
           className="p-5 bg-olive text-background rounded-full hover:bg-olive-dark"
@@ -94,7 +95,8 @@ const Machine: React.FC<MachineProps> = ({
           size={"xxl"}
           aria-label="plus"
         >
-          <Plus className="h-10 w-10" />
+          {/* <Plus className="h-10 w-10" /> */}
+          <span className="text-4xl font-black">+</span>
         </Button>
       </div>
     </motion.div>
