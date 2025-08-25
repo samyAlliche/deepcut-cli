@@ -6,7 +6,7 @@ import MachineVinyls from "./MachineVinyls";
 import { motion, useAnimationControls } from "motion/react";
 import Counter from "@/components/Machine/Counter";
 import { Button } from "../ui/button";
-import { Minus, Plus } from "lucide-react";
+//import { Minus, Plus } from "lucide-react";
 
 interface MachineProps {
   value: number;
