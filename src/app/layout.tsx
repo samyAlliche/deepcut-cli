@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -52,6 +53,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
