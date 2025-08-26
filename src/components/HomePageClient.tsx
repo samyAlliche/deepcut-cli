@@ -60,7 +60,7 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
       layout
     >
       {showMachine && (
-        <div className="relative w-5/7 sm:w-2/3 gap-2 justify-center text-center font-black">
+        <div className="relative w-3/4 sm:w-2/3 gap-2 justify-center text-center font-black">
           <motion.h2
             className="absolute sm:text-2xl text-lg sm:-top-2 top-100 leading-tight justify-self-center"
             initial={{ opacity: 0, y: 10 }}
