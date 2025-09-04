@@ -44,48 +44,20 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
   const showMachine =
     !hasShuffled || (hasShuffled && shuffledData.length === 0 && !isLoading);
 
-  const springAnimation = {
-    type: "spring" as const,
-    stiffness: 150,
-    damping: 20,
-    mass: 3,
-  };
-
   return (
     <motion.div
       className={clsx(
-        "flex flex-col items-center w-full min-h-[600px]",
+        "flex flex-col items-center w-full min-h-[600px] mt-10 sm:mt-0",
         hasShuffled && !isLoading && "mt-14 sm:mt-8"
       )}
       layout
     >
-      {showMachine && (
-        <div className="relative w-3/4 sm:w-2/3 gap-2 justify-center text-center font-black">
-          <motion.h2
-            className="absolute sm:text-2xl text-lg sm:-top-2 top-100 leading-tight justify-self-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={springAnimation}
-          >
-            Discover random tracks from curated YouTube playlists
-          </motion.h2>
-          <motion.h3
-            className="absolute sm:text-xl text-sm top-114 sm:top-7 justify-self-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ ...springAnimation, delay: 0.5 }}
-          >
-            Hit <span className="italic">Shuffle</span>, get inspired, sample,
-            or just vibe
-          </motion.h3>
-        </div>
-      )}
+      {showMachine && <Subtitles />}
 
       <AnimatePresence mode="wait">
         {showMachine && (
           <motion.div
+            className="relative"
             key="machine"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -193,3 +165,35 @@ export default function HomePageClient({ shuffleAction }: HomePageClientProps) {
     </motion.div>
   );
 }
+
+const Subtitles = () => {
+  const springAnimation = {
+    type: "spring" as const,
+    stiffness: 150,
+    damping: 20,
+    mass: 3,
+  };
+  return (
+    <div className="flex flex-col gap-2 justify-center text-center font-black">
+      <motion.h2
+        className="sm:text-xl md:text-2xl text-lg leading-tight"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 10 }}
+        transition={springAnimation}
+      >
+        Discover random tracks from curated YouTube playlists
+      </motion.h2>
+      <motion.h3
+        className="sm:text-lg md:text-xl text-sm"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 10 }}
+        transition={{ ...springAnimation, delay: 0.5 }}
+      >
+        Hit <span className="italic">Shuffle</span>, get inspired, sample, or
+        just vibe
+      </motion.h3>
+    </div>
+  );
+};

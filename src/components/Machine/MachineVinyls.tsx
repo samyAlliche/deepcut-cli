@@ -8,187 +8,160 @@ const MachineVinyls: React.FC<MachineVinylsProps> = ({ className }) => {
   return (
     <svg
       className={className}
-      width="204"
-      height="200"
-      viewBox="0 0 204 200"
+      width="330"
+      height="330"
+      viewBox="0 0 330 330"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="100" width="3" height="100" fill="#202020" />
-      <rect x="100" y="100" width="3" height="100" fill="#202020" />
       <rect
-        x="104"
-        y="102"
-        width="3"
-        height="100"
-        transform="rotate(-90 104 102)"
+        x="163.096"
+        y="67.1547"
+        width="3.0141"
+        height="99.9455"
         fill="#202020"
       />
       <rect
-        y="102"
-        width="3"
-        height="100"
-        transform="rotate(-90 0 102)"
+        x="163.096"
+        y="167.1"
+        width="3.0141"
+        height="99.9455"
         fill="#202020"
       />
       <rect
-        x="29.875"
-        y="30.7035"
-        width="3"
-        height="100"
-        transform="rotate(-45 29.875 30.7035)"
+        x="167.115"
+        y="169.099"
+        width="2.99836"
+        height="100.47"
+        transform="rotate(-90 167.115 169.099)"
         fill="#202020"
       />
       <rect
-        x="100.586"
-        y="101.414"
-        width="3"
-        height="100"
-        transform="rotate(-45 100.586 101.414)"
+        x="62.6255"
+        y="169.099"
+        width="2.99836"
+        height="100.47"
+        transform="rotate(-90 62.6255 169.099)"
         fill="#202020"
       />
       <rect
-        x="104.828"
-        y="100"
-        width="3"
-        height="100"
-        transform="rotate(-135 104.828 100)"
+        width="3.00624"
+        height="100.208"
+        transform="matrix(0.708955 -0.705253 0.708955 0.705253 92.6412 97.8416)"
         fill="#202020"
       />
       <rect
-        x="31.2893"
-        y="173.539"
-        width="3"
-        height="100"
-        transform="rotate(-135 31.2893 173.539)"
+        width="3.00624"
+        height="100.208"
+        transform="matrix(0.708955 -0.705253 0.708955 0.705253 163.684 168.513)"
         fill="#202020"
       />
       <rect
-        x="50.2681"
-        y="14.3975"
-        width="3"
-        height="100"
-        transform="rotate(-30 50.2681 14.3975)"
+        width="3.00624"
+        height="100.208"
+        transform="matrix(-0.708955 -0.705253 0.708955 -0.705253 167.947 167.1)"
         fill="#202020"
       />
       <rect
-        x="100.268"
-        y="101"
-        width="3"
-        height="100"
-        transform="rotate(-30 100.268 101)"
+        width="3.00624"
+        height="100.208"
+        transform="matrix(-0.708955 -0.705253 0.708955 -0.705253 94.0618 240.599)"
         fill="#202020"
       />
       <rect
-        x="104.732"
-        y="100.732"
-        width="3"
-        height="100"
-        transform="rotate(-120 104.732 100.732)"
+        width="3.01018"
+        height="100.077"
+        transform="matrix(0.867155 -0.498038 0.501964 0.864888 113.13 81.5446)"
         fill="#202020"
       />
       <rect
-        x="14.6655"
-        y="152.732"
-        width="3"
-        height="100"
-        transform="rotate(-120 14.6655 152.732)"
+        width="3.01018"
+        height="100.077"
+        transform="matrix(0.867155 -0.498038 0.501964 0.864888 163.365 168.1)"
         fill="#202020"
       />
       <rect
-        x="4.88965"
-        y="76.0499"
-        width="3"
-        height="100"
-        transform="rotate(-75 4.88965 76.0499)"
+        width="3.00231"
+        height="100.339"
+        transform="matrix(-0.501965 -0.864888 0.867155 -0.498038 167.85 167.832)"
         fill="#202020"
       />
       <rect
-        x="101.482"
-        y="101.932"
-        width="3"
-        height="100"
-        transform="rotate(-75 101.482 101.932)"
+        width="3.00231"
+        height="100.339"
+        transform="matrix(-0.501965 -0.864888 0.867155 -0.498038 77.3599 219.803)"
         fill="#202020"
       />
       <rect
-        x="104.449"
-        y="98.5858"
-        width="3"
-        height="100"
-        transform="rotate(-165 104.449 98.5858)"
+        width="2.99942"
+        height="100.435"
+        transform="matrix(0.260086 -0.965585 0.966263 0.257557 67.5382 143.163)"
         fill="#202020"
       />
       <rect
-        x="77.5322"
-        y="199.042"
-        width="3"
-        height="100"
-        transform="rotate(-165 77.5322 199.042)"
+        width="2.99942"
+        height="100.435"
+        transform="matrix(0.260086 -0.965585 0.966263 0.257557 164.585 169.031)"
         fill="#202020"
       />
       <rect
-        x="14.3975"
-        y="51.7321"
-        width="3"
-        height="100"
-        transform="rotate(-60 14.3975 51.7321)"
+        width="3.01305"
+        height="99.9807"
+        transform="matrix(-0.966263 -0.257557 0.260086 -0.965585 167.566 165.687)"
         fill="#202020"
       />
       <rect
-        x="101"
-        y="101.732"
-        width="3"
-        height="100"
-        transform="rotate(-60 101 101.732)"
+        width="3.01305"
+        height="99.9807"
+        transform="matrix(-0.966263 -0.257557 0.260086 -0.965585 140.522 266.088)"
         fill="#202020"
       />
       <rect
-        x="104.732"
-        y="99.2679"
-        width="3"
-        height="100"
-        transform="rotate(-150 104.732 99.2679)"
+        width="3.00231"
+        height="100.339"
+        transform="matrix(0.501964 -0.864888 0.867155 0.498038 77.0907 118.858)"
         fill="#202020"
       />
       <rect
-        x="52.7319"
-        y="189.335"
-        width="3"
-        height="100"
-        transform="rotate(-150 52.7319 189.335)"
+        width="3.00231"
+        height="100.339"
+        transform="matrix(0.501964 -0.864888 0.867155 0.498038 164.1 168.831)"
         fill="#202020"
       />
       <rect
-        x="5.92505"
-        y="127.814"
-        width="3"
-        height="100"
-        transform="rotate(-105 5.92505 127.814)"
+        width="3.01018"
+        height="100.077"
+        transform="matrix(-0.867155 -0.498038 0.501964 -0.864888 167.85 166.369)"
         fill="#202020"
       />
       <rect
-        x="102.518"
-        y="101.932"
-        width="3"
-        height="100"
-        transform="rotate(-105 102.518 101.932)"
+        width="3.01018"
+        height="100.077"
+        transform="matrix(-0.867155 -0.498038 0.501964 -0.864888 115.605 256.386)"
         fill="#202020"
       />
       <rect
-        x="103.414"
-        y="97.5505"
-        width="3"
-        height="100"
-        transform="rotate(165 103.414 97.5505)"
+        width="2.99942"
+        height="100.435"
+        transform="matrix(-0.260086 -0.965585 0.966263 -0.257558 68.5784 194.899)"
         fill="#202020"
       />
       <rect
-        x="130.331"
-        y="198.007"
-        width="3"
-        height="100"
-        transform="rotate(165 130.331 198.007)"
+        width="2.99942"
+        height="100.435"
+        transform="matrix(-0.260086 -0.965585 0.966263 -0.257558 165.625 169.031)"
+        fill="#202020"
+      />
+      <rect
+        width="3.01305"
+        height="99.9807"
+        transform="matrix(-0.966263 0.257558 -0.260086 -0.965585 166.526 164.652)"
+        fill="#202020"
+      />
+      <rect
+        width="3.01305"
+        height="99.9807"
+        transform="matrix(-0.966263 0.257558 -0.260086 -0.965585 193.57 265.054)"
         fill="#202020"
       />
     </svg>

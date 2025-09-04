@@ -21,7 +21,7 @@ async function shuffleAction(value: number): Promise<Video[]> {
 
 export default function Home() {
   return (
-    <div className="font-sans container mx-auto px-6 sm:px-6 lg:px-8 pt-8 flex flex-col min-h-screen gap-2 sm:gap-12 ">
+    <div className="font-sans container mx-auto px-6 sm:px-6 lg:px-8 pt-8 flex flex-col min-h-screen gap-2 sm:gap-10 ">
       <header className="w-full mb-18">
         <div className="flex w-full justify-start">
           <Title />

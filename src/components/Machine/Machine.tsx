@@ -6,7 +6,6 @@ import MachineVinyls from "./MachineVinyls";
 import { motion, useAnimationControls } from "motion/react";
 import Counter from "@/components/Machine/Counter";
 import { Button } from "../ui/button";
-//import { Minus, Plus } from "lucide-react";
 
 interface MachineProps {
   value: number;
@@ -22,6 +21,12 @@ const Machine: React.FC<MachineProps> = ({
   const controls = useAnimationControls();
   const [isStopped, setIsStopped] = useState(false);
   const prevIsLoading = useRef(false);
+
+  const machineSize = {
+    mobile: 280, // pixels
+    tablet: 350,
+    desktop: 430,
+  };
 
   useEffect(() => {
     if (prevIsLoading.current && !isLoading) {
@@ -60,7 +65,15 @@ const Machine: React.FC<MachineProps> = ({
     }
   }, [isLoading, isStopped, controls]);
   return (
-    <motion.div className="grid place-items-center scale-75 md:scale-100">
+    <motion.div
+      className="grid place-items-center scale-70 sm:scale-80 md:scale-100 sm:-mt-8 sm:-mb-8 md:mb-0 md:mt-0 -mt-16 -mb-16"
+      style={{
+        width: "100%",
+        maxWidth: `${machineSize.desktop}px`,
+        maxHeight: `${machineSize.desktop}px`,
+        aspectRatio: "1 / 1",
+      }}
+    >
       <MachineGlass className="[grid-area:1/1] z-10" />
       <motion.div className="[grid-area:1/1] mb-18 z-20" animate={controls}>
         <MachineVinyls />
@@ -79,24 +92,24 @@ const Machine: React.FC<MachineProps> = ({
           borderRadius={20}
         />
       </div>
-      <div className="[grid-area:1/1] mt-10.5 z-50 flex gap-74">
+      <div className="[grid-area:1/1] mt-11 z-50 flex gap-74">
         <Button
-          className="bg-olive text-background rounded-full hover:bg-olive-dark p-5"
+          className="bg-olive text-background rounded-full hover:bg-olive-dark active:bg-olive-dark disabled:bg-olive-dark disabled:opacity-100 p-5"
           onClick={() => onValueChange(value > 1 ? value - 1 : 1)}
           size={"xxl"}
           aria-label="minus"
+          disabled={value <= 1}
         >
-          {/* <Minus className="h-10 w-10" /> */}
-          <span className="text-4xl font-black">-</span>
+          <span className="text-4xl font-black select-none">-</span>
         </Button>
         <Button
-          className="p-5 bg-olive text-background rounded-full hover:bg-olive-dark"
+          className="p-5 bg-olive text-background rounded-full hover:bg-olive-dark active:bg-olive-dark disabled:bg-olive-dark disabled:opacity-100"
           onClick={() => onValueChange(value < 10 ? value + 1 : 10)}
           size={"xxl"}
           aria-label="plus"
+          disabled={value >= 10}
         >
-          {/* <Plus className="h-10 w-10" /> */}
-          <span className="text-4xl font-black">+</span>
+          <span className="text-4xl font-black select-none">+</span>
         </Button>
       </div>
     </motion.div>
