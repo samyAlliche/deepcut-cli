@@ -14,7 +14,7 @@ const MachineSkeleton: React.FC<MachineSkeletonProps> = ({ className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_5_77)">
+      <g clipPath="url(#clip0_5_77)">
         <path
           d="M88.9999 330.002C139.898 315.592 165.329 286.854 165.288 241C165.414 286.895 190.862 318.111 241.576 330.002H88.9999Z"
           fill="#1E3F1B"

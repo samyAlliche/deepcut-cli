@@ -4,6 +4,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
+import AdSense from "@/components/AdSense";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -44,6 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <AdSense pId="ca-pub-6104349001448914" />
+      </head>
       <body className={`${figtree.variable} antialiased`}>
         <ThemeProvider
           attribute={"data-theme"}
