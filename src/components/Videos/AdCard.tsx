@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+"use client";
+import { useEffect, useRef } from "react";
 import clsx from "clsx";
 
 declare global {
@@ -8,21 +9,9 @@ declare global {
 }
 
 interface AdCardProps {
-  /**
-   * Optional additional class names for styling.
-   */
   className?: string;
-  /**
-   * Your Google AdSense publisher ID (e.g., "ca-pub-xxxxxxxxxxxxxxxx").
-   */
   adClient: string;
-  /**
-   * The ID of the specific ad slot this component should render.
-   */
   adSlot: string;
-  /**
-   * The layout key for fluid ad formats, provided by AdSense.
-   */
   adLayoutKey?: string;
 }
 export default function AdCard({
@@ -31,14 +20,22 @@ export default function AdCard({
   adSlot,
   adLayoutKey,
 }: AdCardProps) {
+  const adPushed = useRef(false); // Create a ref to track if the ad has been pushed
+
   useEffect(() => {
+    // Only push the ad if it hasn't been pushed before for this component instance.
+    if (adPushed.current) {
+      return;
+    }
+
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
+      // Set the ref to true so this doesn't run again on the second mount in Strict Mode.
+      adPushed.current = true;
     } catch (err) {
       console.error("AdSense failed to initialize:", err);
     }
-  }, []); // The empty dependency array ensures this effect runs only once on mount.
-
+  }, []);
   return (
     <div
       className={clsx(
