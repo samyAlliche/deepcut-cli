@@ -23,7 +23,7 @@ const Machine: React.FC<MachineProps> = ({
   const prevIsLoading = useRef(false);
 
   const machineSize = {
-    mobile: 280, // pixels
+    mobile: 280,
     tablet: 350,
     desktop: 430,
   };

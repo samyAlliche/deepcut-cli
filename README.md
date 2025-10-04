@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Deepcut CLI
 
-## Getting Started
+This is the frontend for Deepcut, a dynamic web app built specifically for producers and beatmakers that are often looking for samples online. The app helps users discover lesser-known music ("deep cuts") randomly served by the [Deepcut API (Backend)](https://github.com/samyAlliche/deepcut). The API is connected to a database filled with youtube curated playlists.
 
-First, run the development server:
+**Live Demo:** https://deepcut.twxntytwo.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies & Libraries Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **UI Library:** [React](https://react.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animation:** [Framer Motion](https://www.framer.com/motion/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To get the frontend running locally, please follow these steps:
 
-## Learn More
+1.  **Clone the Repository**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/samyAlliche/deepcut-cli.git
+    cd deepcut-cli
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install Dependencies**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Set Up Environment Variables**
+    Create a `.env.local` file in the root and add a `SYNC_SECRET` variable with the same secret as in the backend.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  **Start the Development Server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Environment Variables
+
+The frontend requires the following environment variables to connect to the backend:
+
+| Variable      | Description                                                             |
+| :------------ | :---------------------------------------------------------------------- |
+| `SYNC_SECRET` | The secret you chose, must be the same in both the backend and frontend |
+
+## Available Scripts
+
+In the project directory, you can run:
+
+- `npm run dev`: Starts the application in development mode.
+- `npm run build`: Creates an optimized production build of the application.
+- `npm run start`: Starts the production server using the build output.
+- `npm run lint`: Runs ESLint to check for code quality and style issues.

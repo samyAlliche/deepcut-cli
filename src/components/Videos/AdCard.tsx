@@ -20,17 +20,15 @@ export default function AdCard({
   adSlot,
   adLayoutKey,
 }: AdCardProps) {
-  const adPushed = useRef(false); // Create a ref to track if the ad has been pushed
+  const adPushed = useRef(false);
 
   useEffect(() => {
-    // Only push the ad if it hasn't been pushed before for this component instance.
     if (adPushed.current) {
       return;
     }
 
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-      // Set the ref to true so this doesn't run again on the second mount in Strict Mode.
       adPushed.current = true;
     } catch (err) {
       console.error("AdSense failed to initialize:", err);
@@ -43,13 +41,6 @@ export default function AdCard({
         className
       )}
     >
-      {/*
-        This <ins> element is the placeholder where Google AdSense will inject the ad.
-        - `adsbygoogle` class is required for the script to identify it.
-        - `data-ad-client` and `data-ad-slot` are your specific AdSense identifiers.
-        - `data-ad-format="fluid"` tells AdSense to create a responsive ad that adapts to the container size.
-        - `data-full-width-responsive="true"` is an additional hint for better responsiveness.
-      */}
       <ins
         className="adsbygoogle"
         style={{ display: "block", width: "100%", height: "100%" }}
