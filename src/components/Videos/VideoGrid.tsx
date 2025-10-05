@@ -1,7 +1,7 @@
 import Video from "@/types/video";
 import VideoCard from "./VideoCard";
 import clsx from "clsx";
-import AdCard from "./AdCard";
+// import AdCard from "./AdCard";
 
 interface VideoGridProps {
   videos: Video[];
@@ -38,11 +38,11 @@ export default function VideoGrid({ videos, isOneColumn }: VideoGridProps) {
           className={clsx(videoCount == 1 && "sm:col-start-2 sm:col-end-2")}
         />
       ))}
-      <AdCard
+      {/* <AdCard
         adClient={"ca-pub-6104349001448914"}
         adSlot={"2984888733"}
         adLayoutKey={"-6s+eg+1g-3d+2z"}
-      />
+      /> */}
     </div>
   );
 }
